@@ -12,13 +12,7 @@ https://jsonplaceholder.typicode.com/users
 
 # Comments:
 
-1) Users are stored in the H2 database, (see: UserController::afterPropertiesSet):
-```
-   typicodeService.fetchUsers().getBody().forEach(user -> {
-   userService.save(user);
-   });
-```
-2) Unit tests are added to check the http calls (see TypicodeServiceTest::fetchUsers):
+1) Unit tests are added to check the http calls (see TypicodeServiceTest::fetchUsers):
 ```
     int firstCount = -1;
     for (int i = 0; i < 10; i++) {
@@ -33,5 +27,5 @@ https://jsonplaceholder.typicode.com/users
       assertEquals(200, users.getStatusCodeValue());
     }
 ```
-3) After running the application, a "log.txt" file is automatically created for logs, with requests and responses details.</br>
-4) Unit tests are added to validate all the users emails (see TypicodeServiceTest::usersEmails).</br>
+2) After running the application, a "log.txt" file is automatically created for logs, with requests and responses details.</br>
+3) Unit tests are added to validate all the users emails (see TypicodeServiceTest::usersEmails).</br>
